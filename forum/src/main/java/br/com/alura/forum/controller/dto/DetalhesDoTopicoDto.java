@@ -16,7 +16,7 @@ public class DetalhesDoTopicoDto {
 	private LocalDateTime dataCriacao;
 	private String nomeAutor;
 	private StatusTopico status;
-	private List<RespostaDto> respostas; 
+	private List<RespostaDto> respostas;
 	
 	public DetalhesDoTopicoDto(Topico topico) {
 		this.id = topico.getId();
@@ -56,8 +56,5 @@ public class DetalhesDoTopicoDto {
 	public List<RespostaDto> getRespostas() {
 		return respostas;
 	}
-	
-	
-	
 	
 }

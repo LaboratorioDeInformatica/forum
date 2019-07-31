@@ -14,7 +14,7 @@ public class RespostaDto {
 	public RespostaDto(Resposta resposta) {
 		this.id = resposta.getId();
 		this.mensagem = resposta.getMensagem();
-		this.dataCriacao =resposta.getDataCriacao();
+		this.dataCriacao = resposta.getDataCriacao();
 		this.nomeAutor = resposta.getAutor().getNome();
 	}
 
@@ -33,6 +33,5 @@ public class RespostaDto {
 	public String getNomeAutor() {
 		return nomeAutor;
 	}
-	
 	
 }

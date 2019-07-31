@@ -16,7 +16,7 @@ import javax.persistence.OneToMany;
 @Entity
 public class Topico {
 
-	@Id @GeneratedValue(strategy= GenerationType.IDENTITY)
+	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String titulo;
 	private String mensagem;
@@ -27,34 +27,17 @@ public class Topico {
 	private Usuario autor;
 	@ManyToOne
 	private Curso curso;
-	@OneToMany(mappedBy="topico")
+	@OneToMany(mappedBy = "topico")
 	private List<Resposta> respostas = new ArrayList<>();
-
-
 	
-	public Topico(Long id, String titulo, String mensagem, LocalDateTime dataCriacao, StatusTopico status,
-			Usuario autor, Curso curso, List<Resposta> respostas) {
-		super();
-		this.id = id;
-		this.titulo = titulo;
-		this.mensagem = mensagem;
-		this.dataCriacao = dataCriacao;
-		this.status = status;
-		this.autor = autor;
-		this.curso = curso;
-		this.respostas = respostas;
-	}
-
 	public Topico() {
 	}
-
+	
 	public Topico(String titulo, String mensagem, Curso curso) {
-		super();
 		this.titulo = titulo;
 		this.mensagem = mensagem;
 		this.curso = curso;
 	}
-
 
 	@Override
 	public int hashCode() {
